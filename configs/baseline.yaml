@@ -1,0 +1,31 @@
+data:
+  feature_file: "data/brca.csv"
+  paitent_limit: 1000
+  np_bags_dir: "data/bags_np/bag_150/"
+  bag_size: 128 # number of tiles to sample from each image
+  resample_small_bags: True # if True, will resample small bags to the bag_size
+  static_bags: False # if True, will use the same bags for all folds
+
+concepts:
+  no_concepts: False
+  cpt_ids: ["Stage", "Age", "RNA_Bio_ter"]
+  concept_states: [4, 3, 3]
+
+training:
+  Kfolds: 5
+  first_fold_only: False
+  batch_size: 8
+  epochs: 10
+  learning_rate: 0.001
+  dropout: 0.2
+  weight_decay: 0.00004
+  lr_scheduler: "cosine"
+
+model:
+  vit_model_name: "uni"
+  fine_tune: "none"
+  grad_checkpointing: False
+  pooling: "abmil"
+  concept_loss_weight: 1.0
+  concept_heads: 'linear'
+  task_head: 'linear'

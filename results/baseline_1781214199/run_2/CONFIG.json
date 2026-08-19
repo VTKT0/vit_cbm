@@ -1,0 +1,42 @@
+{
+  "data": {
+    "feature_file": "data/brca.csv", 
+    "paitent_limit": 1000, 
+    "np_bags_dir": "data/bags_np/bag_150/", 
+    "bag_size": 128, 
+    "resample_small_bags": true, 
+    "static_bags": false
+  }, 
+  "concepts": {
+    "no_concepts": false, 
+    "cpt_ids": [
+      "Stage", 
+      "Age", 
+      "RNA_Bio_ter"
+    ], 
+    "concept_states": [
+      4, 
+      3, 
+      3
+    ]
+  }, 
+  "training": {
+    "Kfolds": 5, 
+    "first_fold_only": false, 
+    "batch_size": 8, 
+    "epochs": 10, 
+    "learning_rate": 0.001, 
+    "dropout": 0.2, 
+    "weight_decay": 4e-05, 
+    "lr_scheduler": "cosine"
+  }, 
+  "model": {
+    "vit_model_name": "uni", 
+    "fine_tune": "none", 
+    "grad_checkpointing": false, 
+    "pooling": "abmil", 
+    "concept_loss_weight": 1.0, 
+    "concept_heads": "linear", 
+    "task_head": "linear"
+  }
+}
