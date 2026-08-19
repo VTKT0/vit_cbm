@@ -1,6 +1,6 @@
 # ViT CBM package
 
-This codebase was used to produce results for my MSc thesis. It allows the user to fit a concept bottleneck model (CBM) on a dataset containing paitent WSI slides and concepts, with the ability to adjust various hyperparameters to understand their impact on model performance
+This codebase was used to produce results for my MSc thesis. It allows the user to fit a concept bottleneck model (CBM) on a dataset containing paitent WSI slides and concepts, with the ability to adjust various hyperparameters to understand their impact on model performance.
 
 
 ## Requirements
